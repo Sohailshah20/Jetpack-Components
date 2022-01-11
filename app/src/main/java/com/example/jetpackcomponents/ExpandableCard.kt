@@ -40,7 +40,6 @@ fun ExpandableCard(
     descriptionFontWeight: FontWeight = FontWeight.Normal,
     descriptionMaxLines: Int = 4,
     shape: CornerBasedShape = Shapes.medium,
-    padding: Dp = 12.dp,
     cardColor: Color = Color.White
 
 ){
@@ -65,7 +64,7 @@ fun ExpandableCard(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(padding)
+                .padding(horizontal = 12.dp)
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically
@@ -98,6 +97,7 @@ fun ExpandableCard(
                     fontWeight = descriptionFontWeight,
                 maxLines = descriptionMaxLines,
                 overflow = TextOverflow.Ellipsis)
+                Spacer(modifier = Modifier.height(12.dp))
             }
              
         }
